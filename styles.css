@@ -1,0 +1,362 @@
+:root {
+  --bg: #e7d7b8;
+  --paper: #efe7c7;
+  --brown: #7d4f31;
+  --brown-dark: #6d4229;
+  --accent: #b14326;
+  --text: #6d5a3a;
+  --shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px 24px 48px;
+}
+
+.home-link {
+  display: inline-block;
+  margin-left: 6px;
+  margin-bottom: 28px;
+  color: #9e9385;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.stage {
+  position: relative;
+  width: min(100%, 1120px);
+  aspect-ratio: 1.25;
+  margin: 0 auto;
+}
+
+.prop,
+.book {
+  position: absolute;
+}
+
+.prop {
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.18));
+  user-select: none;
+  pointer-events: none;
+}
+
+.lego {
+  width: 41%;
+  left: 17%;
+  top: 6%;
+  transform: rotate(-10deg);
+}
+
+.mat {
+  width: 62%;
+  left: 12%;
+  top: 16%;
+  transform: rotate(-12deg);
+}
+
+.pencils-box {
+  width: 25%;
+  right: 8%;
+  top: 15%;
+  transform: rotate(16deg);
+}
+
+.crayons {
+  width: 22%;
+  left: 2%;
+  bottom: 18%;
+  transform: rotate(25deg);
+}
+
+.stones {
+  width: 16%;
+  right: 6%;
+  bottom: 15%;
+  transform: rotate(18deg);
+}
+
+.paint-blue {
+  width: 14%;
+  right: 3%;
+  bottom: 6%;
+  transform: rotate(18deg);
+}
+
+.paint-red {
+  width: 12%;
+  right: 14%;
+  bottom: 0;
+  transform: rotate(-27deg);
+}
+
+.shaving-top {
+  width: 16%;
+  right: 22%;
+  top: 11%;
+  transform: rotate(20deg);
+}
+
+.shaving-bottom {
+  width: 13%;
+  left: 30%;
+  bottom: 0;
+  transform: rotate(4deg);
+}
+
+.tape-top {
+  width: 14%;
+  right: 10%;
+  top: 7%;
+  transform: rotate(22deg);
+}
+
+.tape-left {
+  width: 10%;
+  left: 17%;
+  bottom: 11%;
+  transform: rotate(-24deg);
+}
+
+.mascot {
+  width: 14%;
+  left: 11%;
+  bottom: 17%;
+  transform: rotate(2deg);
+}
+
+.book {
+  width: 59%;
+  left: 25%;
+  top: 21%;
+  transform: rotate(-3deg);
+  filter: drop-shadow(0 16px 26px rgba(0,0,0,.28));
+}
+
+.book-base {
+  width: 100%;
+}
+
+.left-page,
+.right-page {
+  position: absolute;
+  top: 10%;
+  bottom: 11%;
+}
+
+.left-page {
+  left: 8%;
+  width: 36%;
+}
+
+.right-page {
+  right: 8%;
+  width: 39%;
+}
+
+.avatar {
+  width: 52%;
+  margin-left: 2%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.16);
+}
+
+.about h2,
+.about h3,
+.subtitle,
+.contacts-title {
+  margin: 0 0 8px;
+  color: var(--brown-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.about h2,
+.about h3 {
+  font-size: clamp(14px, 1.25vw, 22px);
+}
+
+.about p {
+  margin: 0 0 12px;
+  color: #71573e;
+  line-height: 1.25;
+  font-size: clamp(13px, 1.05vw, 18px);
+}
+
+.year {
+  width: 48%;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: clamp(16px, 1.6vw, 28px);
+  margin-bottom: 2px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3.15vw, 56px);
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+}
+
+.note {
+  margin: 0 0 24px;
+  max-width: 92%;
+  font-size: clamp(13px, 1.05vw, 18px);
+  line-height: 1.35;
+}
+
+.cta-bg {
+  width: 72%;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.18));
+}
+
+.cta {
+  position: absolute;
+  left: 7%;
+  top: 53%;
+  width: 62%;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(16px, 1.45vw, 26px);
+  text-transform: lowercase;
+}
+
+.contacts-title {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: clamp(15px, 1.2vw, 20px);
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+}
+
+.social img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding-inline: 16px;
+  }
+
+  .stage {
+    width: min(100%, 760px);
+    aspect-ratio: auto;
+    min-height: 980px;
+  }
+
+  .book {
+    width: 82%;
+    left: 9%;
+    top: 22%;
+  }
+
+  .lego { left: 18%; top: 7%; width: 56%; }
+  .mat { width: 86%; left: 6%; top: 16%; }
+  .pencils-box { width: 34%; right: 1%; top: 16%; }
+  .crayons { width: 27%; left: -1%; bottom: 16%; }
+  .stones { width: 18%; right: 7%; bottom: 16%; }
+  .paint-blue { width: 17%; right: 2%; bottom: 7%; }
+  .paint-red { width: 15%; right: 18%; bottom: 2%; }
+  .shaving-top { width: 21%; right: 20%; top: 13%; }
+  .shaving-bottom { width: 17%; left: 26%; bottom: 2%; }
+  .tape-top { width: 18%; right: 9%; top: 9%; }
+  .tape-left { width: 13%; left: 12%; bottom: 12%; }
+  .mascot { width: 19%; left: 4%; bottom: 22%; }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: 18px;
+  }
+
+  .home-link {
+    margin-bottom: 16px;
+  }
+
+  .stage {
+    min-height: 1140px;
+  }
+
+  .book {
+    position: relative;
+    width: 100%;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-top: 180px;
+  }
+
+  .left-page,
+  .right-page {
+    top: 9%;
+    bottom: 10%;
+  }
+
+  .left-page { left: 7%; width: 38%; }
+  .right-page { right: 7%; width: 40%; }
+
+  .about h2,
+  .about h3,
+  .subtitle,
+  .contacts-title,
+  .about p,
+  .note,
+  .cta,
+  h1 {
+    transform: scale(.92);
+    transform-origin: left top;
+  }
+
+  .social { width: 36px; height: 36px; }
+
+  .lego { left: 17%; top: 10px; width: 64%; }
+  .mat { width: 95%; left: 1%; top: 92px; }
+  .pencils-box { width: 40%; right: -2%; top: 90px; }
+  .crayons { width: 28%; left: -4%; bottom: 120px; }
+  .stones { width: 21%; right: 7%; bottom: 140px; }
+  .paint-blue { width: 17%; right: 3%; bottom: 44px; }
+  .paint-red { width: 15%; right: 23%; bottom: 18px; }
+  .shaving-top { width: 23%; right: 20%; top: 52px; }
+  .shaving-bottom { width: 18%; left: 29%; bottom: 14px; }
+  .tape-top { width: 18%; right: 9%; top: 20px; }
+  .tape-left { width: 14%; left: 10%; bottom: 166px; }
+  .mascot { width: 21%; left: 0; bottom: 220px; }
+}
